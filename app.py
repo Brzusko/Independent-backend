@@ -11,12 +11,12 @@ import os
 master_servers = {};
 
 app = Flask(__name__);
-app.register_blueprint(game_service_view);
+app.register_blueprint(game_service_view)
 
 def register_master_servers():
-    master_servers['QuickHand'] = ServerHandler(10);
+    globals.master_servers['QuickHand'] = ServerHandler(10);
 
-    for key, master_server in master_servers.items():
+    for key, master_server in globals.master_servers.items():
         master_server.start();
 
 def run():
