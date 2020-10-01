@@ -22,7 +22,7 @@ def register_master_servers():
 def run():
     globals.init();
     register_master_servers();
-    app.run(threaded=True, host='0.0.0.0');
+    app.run(threaded=True, host='0.0.0.0', port=80);
 
 
 if __name__ == "__main__":
